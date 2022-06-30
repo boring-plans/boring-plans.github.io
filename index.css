@@ -1,0 +1,138 @@
+@font-face {
+    font-family: rubic;
+    src: url('https://cdn.jsdelivr.net/npm/rubik-font@0.0.3/fonts/Rubik-Regular.ttf');
+}
+
+body {
+    font-family: rubic;
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    margin: auto;
+    padding: 24px;
+    width: 90%;
+}
+
+.divider {
+    font-size: xx-small;
+    margin: 3.7vh 0;
+}
+
+.divider-vertical {
+    font-size: xx-small;
+    margin: 0 1.85vh;
+    transform: rotate(90deg);
+}
+
+.icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: #f5f5f5;
+}
+
+.icon-link {
+    height: 21px;
+}
+
+.title {
+    font-weight: bolder;
+    font-size: 3.3rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, .78);
+    text-align: justify;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-card:nth-child(-n+1){
+    margin-top: 0;
+}
+
+.project-card:nth-last-child(-n+1){
+    margin-bottom: 0;
+}
+
+
+.project-card {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: ease-out .2s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    background-color: #f5f5f5;
+}
+
+.card-line {
+    display: inline-block;
+}
+
+.project-title {
+    width: 100%;
+}
+
+.project-description{
+    display: block;
+    margin-top: 8px;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, .27);
+    font-size: small;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .project-card {                
+        flex-basis: calc(50% - 8px);
+    }
+
+    .project-card:nth-child(-n+2){
+        margin-top: 0;
+    }
+    
+    .project-card:nth-last-child(-n+2){
+        margin-bottom: 0;
+    }
+}

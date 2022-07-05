@@ -7,7 +7,7 @@ const works = [
     {
         title: 'N Notes 📖',
         description: 'A blog site. Knowledge has no limit ♾️.',
-        link: 'https://boring-plans.github.io/boring-blogs/'
+        link: 'https://boring-plans.github.io/n-notes/'
     },
     {
         title: 'Vuetify Admin 🖥️',

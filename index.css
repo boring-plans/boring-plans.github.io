@@ -21,6 +21,11 @@ body {
     margin: 3.7vh 0;
 }
 
+.divider.filled {
+    height: 12px;
+    margin-bottom: 0;
+}
+
 .divider-vertical {
     font-size: xx-small;
     margin: 0 1.85vh;

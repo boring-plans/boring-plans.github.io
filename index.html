@@ -7,6 +7,11 @@
     <title>Allen Tao</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" href="https://picsum.photos/128/128?random&" />
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.13.1/dist/av.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.37/dist/vue.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-reaction@1.0.12/lib/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/device-uuid@1.0.4/lib/device-uuid.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -14,6 +19,15 @@
         <h3 class="divider subtitle">My name is Allen Tao</h3>
         <p class="paragraph">I am a software developer, a fine-weather-photography enthusiast, a rookie in contributing to open source projects.</p>
         <p class="paragraph">In spare time, I'm keen on developing some individual projects, and expect to become an awesome independent software developer some day.</p>
+        <div id="app">
+            <emoji-reaction 
+                :reactor="reactor" 
+                react-to="tkzt.cn"
+                lc-app-id="ocLQI6JRaaujbK1uOEhqwMMy-MdYXbMMI"
+                lc-app-key="U65o7Va32y6dWshUhJHWrtUe"
+                :emojis="['👍', '👎', '😄', '🎉', '😕', '❤️', '🚀', '👀']"
+            />
+        </div>
         <h3 class="divider subtitle">Some Works</h3>
         <div class="card-container"></div>
         <p class="divider filled"></p>
@@ -29,5 +43,17 @@
         </footer>
     </div>
     <script src="index.js"></script>
+    <script>
+         const { createApp } = Vue
+         
+         createApp({
+            components: {EmojiReaction: EmojiReaction.EmojiReaction},
+            data() {
+                return {
+                    reactor: new DeviceUUID().get()
+                }
+            }
+        }).mount('#app')
+    </script>
 </body>
 </html>

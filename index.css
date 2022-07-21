@@ -1,10 +1,10 @@
 @font-face {
-    font-family: rubic;
+    font-family: rubik;
     src: url('https://cdn.jsdelivr.net/npm/rubik-font@0.0.3/fonts/Rubik-Regular.ttf');
 }
 
 body {
-    font-family: rubic;
+    font-family: rubik;
     display: flex;
     margin: 0;
     min-height: 100vh;
